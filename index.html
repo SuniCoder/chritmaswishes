@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Merry Chritmas</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/damYg6Mana2CHXfuz5/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "acceptButton" onclick="nextPage()">Accepted</button>
+                <button class="btn" id="notacceptButton" onmouseover="moveButton()" onclick="moveButton()">Not Accepted</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('notacceptButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('notacceptButton').offsetHeight) - 48;
+                        document.getElementById('notacceptButton').style.left = `${x}px`;
+                        document.getElementById('notacceptButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
